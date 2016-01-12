@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-configuration PUBLIC
+        "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+
+<hibernate-configuration>
+    <session-factory>
+        <!--  Database connection settings  -->
+        <property name="connection.driver_class">com.mysql.jdbc.Driver</property>
+        <property name="connection.url">jdbc:mysql://mysql.agh.edu.pl:3306/khopek</property>
+        <property name="connection.username">khopek</property>
+        <property name="connection.password">XJCi3CL5</property>
+        <property 	name="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property>
+
+        <!--  Echo all executed SQL to stdout  -->
+        <property name="show_sql">true</property>
+        <!--  Drop and re-create the database schema on startup  -->
+        <property name="hbm2ddl.auto">create-drop</property>
+        <property name="c3p0.timeout">10</property>
+        <mapping class="com.engineer.model.Message"/>
+
+    </session-factory>
+
+</hibernate-configuration>

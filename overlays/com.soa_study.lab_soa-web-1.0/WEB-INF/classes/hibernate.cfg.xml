@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-configuration PUBLIC
+        "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+
+<hibernate-configuration>
+    <session-factory>
+        <!--  Database connection settings  -->
+        <property name="hibernate.connection.datasource">java:/jboss/datasources/myDB</property> <!--tylko to musi byc poniewaz cala konfiguracja jest juz w JBOOSie. -->
+
+        <property 	name="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property>
+
+        <!--  Echo all executed SQL to stdout  -->
+        <property name="show_sql">true</property>
+        <!--  Drop and re-create the database schema on startup  -->
+        <property name="c3p0.timeout">10</property>
+        <mapping class="com.engineer.model.Message"/>
+        <mapping class="com.engineer.model.Faculty"/>
+        <mapping class="com.engineer.model.Student"/>
+
+    </session-factory>
+
+</hibernate-configuration>
