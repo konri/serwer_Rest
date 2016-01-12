@@ -1,0 +1,45 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-configuration PUBLIC
+        "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+
+<hibernate-configuration>
+    <session-factory>
+        <!--  Database connection settings  -->
+
+        <property name="connection.driver_class">com.mysql.jdbc.Driver</property>
+        <property name="connection.url">jdbc:mysql://sql.mlodywilku.nazwa.pl:3307/mlodywilku_3</property>
+        <property name="connection.username">mlodywilku_3</property>
+        <property name="connection.password">Engineer1234</property>
+
+
+        <property name="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property>
+        <property name="c3p0.max_size">10</property>
+        <property name="show_sql">true</property>
+        <property name="format_sql">true</property>
+        <property name="use_sql_comments">true</property>
+
+        <mapping class="com.engineer.model.City"/>
+        <mapping class="com.engineer.model.Country"/>
+        <mapping class="com.engineer.model.User"/>
+        <mapping class="com.engineer.model.ImageShopObject" />
+        <mapping class="com.engineer.model.BikeType" />
+        <mapping class="com.engineer.model.Manufacturer" />
+        <mapping class="com.engineer.model.ShopObject" />
+        <mapping class="com.engineer.model.Brand" />
+        <mapping class="com.engineer.model.PartType" />
+        <mapping class="com.engineer.model.Part" />
+        <mapping class="com.engineer.model.Bike" />
+        <mapping class="com.engineer.model.Service" />
+        <mapping class="com.engineer.model.Vat" />
+        <mapping class="com.engineer.model.Role" />
+        <mapping class="com.engineer.model.Employee" />
+        <mapping class="com.engineer.model.ShopDetails" />
+        <mapping class="com.engineer.model.TransactionModule" />
+        <mapping class="com.engineer.model.TransactionDetails" />
+        <mapping class="com.engineer.model.ServiceTask" />
+        <mapping class="com.engineer.model.UserBike" />
+
+    </session-factory>
+
+</hibernate-configuration>
